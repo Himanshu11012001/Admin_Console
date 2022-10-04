@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!--
+/** Grid di xml
+ * @category  Webkul
+ * @package   Webkul_Grid
+ * @author    Webkul
+ * @copyright Copyright (c) 2010-2017 Webkul Software Private Limited (https://webkul.com)
+ * @license   https://store.webkul.com/license.html
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Admin\Console\Api\Data\ModuleListInterface" type="Admin\Console\Model\ModuleList" />
+
+    <virtualType name="Admin\Console\Model\ResourceModel\ModuleList\ModuleList\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">setup_module</argument>
+            <argument name="resourceModel" xsi:type="string">Admin\Console\Model\ResourceModel\ModuleList</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="modulelist_record_modulelist_list_data_source" xsi:type="string">Admin\Console\Model\ResourceModel\ModuleList\ModuleList\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

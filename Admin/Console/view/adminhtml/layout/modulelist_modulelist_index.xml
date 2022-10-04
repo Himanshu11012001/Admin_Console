@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Webkul Grid Grid List Layout
+ *
+ * @category    Webkul
+ * @package     Webkul_Grib
+ * @author      Webkul Software Private Limited
+ *
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+   
+
+ <head> 
+
+</head>
+   
+    <body>
+
+        <referenceContainer name="content">
+            <uiComponent name="modulelist_record_modulelist_list"/>
+		
+		
+        </referenceContainer>
+
+        
+         <referenceContainer name="content">
+              
+             <block class="Admin\Console\Block\Adminhtml\Form" name="modulelist.modulelist.index" template="Admin_Console::form.phtml"/>
+		
+		
+        </referenceContainer>
+         
+    </body>
+
+</page>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<!--
+/**
+ * Webkul_Grid Menu
+ *
+ * @category    Webkul
+ * @package     Webkul_Grid
+ * @author      Webkul Software Private Limited
+ *
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add 
+        id="Admin_Console::manager"
+         title="ModuleList"
+          module="Admin_Console" 
+          sortOrder="10" 
+          resource="Admin_Console::manager"/>
+
+    	<add
+         id="Admin_Console::add_row" 
+         title="ModuleList"
+          module="Admin_Console"
+           sortOrder="20" 
+           parent="Admin_Console::manager"
+            action="modulelist/modulelist" 
+            resource="Admin_Console::add_row"/>
+            
+    
+    </menu>
+
+</config>
